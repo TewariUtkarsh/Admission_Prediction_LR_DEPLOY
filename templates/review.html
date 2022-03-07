@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Result Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+    <div class="form">
+        <form action="/report" method="POST">
+            <h1>Predicted Value            : {{scores[0]}}</h1>
+            <h1>R-Square Score(LR)         : {{scores[1]}}</h1>
+            <h1>Adjusted R-Square Score(LR): {{scores[2]}}</h1>
+            <h1>R-Square Score(L1)         : {{scores[3]}}</h1>
+            <h1>R-Square Score(L2)         : {{scores[4]}}</h1>
+            <h1>R-Square Score(Elastic Net): {{scores[5]}}</h1>
+            <input type="submit" value="View Report">
+        </form>
+    </div>
+</body>
+
+</html>

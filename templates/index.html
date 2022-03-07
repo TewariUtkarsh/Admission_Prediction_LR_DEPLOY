@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>ML Prediction</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Details</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <label for="content">Enter Value for Prediction(separated by commas):</label>
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
